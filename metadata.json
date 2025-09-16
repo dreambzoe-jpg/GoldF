@@ -1,0 +1,5 @@
+{
+  "name": "Gold Market Intelligence",
+  "description": "A web application that provides real-time XAUUSD sentiment analysis and market insights using Gemini, with data aggregated from multiple financial sources and presented with beginner-friendly explanations.",
+  "requestFramePermissions": []
+}
