@@ -4,6 +4,7 @@ import ActionSection from './components/ActionSection';
 import LoadingSection from './components/LoadingSection';
 import ResultsSection from './components/ResultsSection';
 import FeaturesSection from './components/FeaturesSection';
+import DisclaimerFooter from './components/DisclaimerFooter';
 import { fetchMarketAnalysis } from './services/geminiService';
 import type { AnalysisResult } from './types';
 
@@ -42,6 +43,7 @@ const App: React.FC = () => {
                 {analysisResult && <ResultsSection result={analysisResult} />}
                 {!analysisResult && !isLoading && <FeaturesSection />}
             </main>
+            <DisclaimerFooter />
         </div>
     );
 };
