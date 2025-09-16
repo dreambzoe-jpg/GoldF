@@ -41,8 +41,8 @@ const DisclaimerFooter: React.FC = () => {
             lineHeight: 1.5,
           }}
         >
-          This application uses the Gemini API (GoogleGenAI) to generate financial insights based on prompts referencing reputable sources like Reuters, Bloomberg, MarketWatch, and economic calendar events. However, the data is produced by the Gemini model and not directly pulled from these platforms or APIs.  <br /><br />
-          The only direct data source is the Gemini API via the @google/genai package. Outputs may not reflect real-time market conditions, so users should verify critical information through official channels.
+          This application uses GoogleGenAI to generate financial insights based on prompts referencing reputable sources like Reuters, Bloomberg, MarketWatch, and economic calendar events. However, the data is produced by the Gemini model and not directly pulled from these platforms or APIs.  <br /><br />
+          The only direct data source is GoogleGenAI via the @google/genai package. Outputs may not reflect real-time market conditions, so users should verify critical information through official channels.
         </div>
       )}
     </footer>
