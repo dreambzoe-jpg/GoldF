@@ -39,8 +39,26 @@ const DisclaimerFooter: React.FC = () => {
             boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
             fontSize: 14,
             lineHeight: 1.5,
+            position: 'relative',
           }}
         >
+          <button
+            aria-label="Close disclaimer"
+            onClick={() => setShow(false)}
+            style={{
+              position: 'absolute',
+              top: 8,
+              right: 8,
+              background: 'none',
+              border: 'none',
+              fontSize: 18,
+              fontWeight: 'bold',
+              color: '#888',
+              cursor: 'pointer',
+            }}
+          >
+            ×
+          </button>
           This application uses GoogleGenAI to generate financial insights based on prompts referencing reputable sources like Reuters, Bloomberg, MarketWatch, and economic calendar events. However, the data is produced by the Gemini model and not directly pulled from these platforms or APIs.  <br /><br />
           The only direct data source is GoogleGenAI via the @google/genai package. Outputs may not reflect real-time market conditions, so users should verify critical information through official channels.
         </div>
