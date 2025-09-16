@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const DisclaimerFooter: React.FC = () => {
   const [show, setShow] = useState(false);
+  const popupRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (show && popupRef.current) {
+      popupRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [show]);
 
   return (
     <footer style={{ textAlign: 'center', padding: 20, background: '#f5f5f5' }}>
@@ -21,6 +28,7 @@ const DisclaimerFooter: React.FC = () => {
       {show && (
         <div
           id="disclaimerPopup"
+          ref={popupRef}
           style={{
             display: 'block',
             maxWidth: 600,
